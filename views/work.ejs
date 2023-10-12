@@ -1,0 +1,42 @@
+<%-include('partials/header.ejs') %>
+<body>
+    <div class="container">
+        <div class="todolist lavender" id="border">           
+            <% if (locals.items_2) { %>
+                    <div class="heading">
+                    <h1><%= locals.this_day %></h1>
+                    <h2>There are <%= locals.items_2.length %> work tasks to do today!</h2>
+                    <div class="work_list">
+                          <ol class="list-group list-group-numbered">
+                            <% for (i=0; i < items_2.length; i++) { %>
+                                 <li class="list-group-item list-group-item-dark">
+                                    <%= items_2[i] %>
+                                </li>
+                               
+                            <% } %>
+                        </ol>
+                    </div>
+                </div>
+            <% } else{ %>
+                    <div class="heading">
+                        <h1>There are no todo items yet</h1>
+                    </div>
+                    
+                <% }; %>
+            
+                    
+                      
+            <br>
+            <div class="form">
+                <form action="/work" method="post" class="enter">
+                    <input type="text" name="task_2" id="task" placeholder="Add Something Todo" required>
+                    <button name="add" type="submit"><img src="\images\plus-circle-svgrepo-com.svg" alt="plus icon" class="icon"></button>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+<%-include('partials/footer.ejs') %>

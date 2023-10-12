@@ -1,0 +1,64 @@
+.container, .daily_list, .work_list, .heading, .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading, .announcement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.announcement {
+    margin-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+}
+
+.icon {
+    height: 1.5rem;
+}
+
+#border {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    /* These are from TechGrowers list project todolistapp-x7i5.onrender.com */
+    box-shadow: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 20px;
+    min-width: 300px;
+    width: 80%;
+    max-width: 400px;
+    min-height: 600px;
+    border: 4px solid;
+    overflow: hidden;
+    
+}
+
+.blue {
+    background-color: aliceblue;
+}
+
+.lavender {
+    background-color: lavender;
+}
+
+.daily_list, .work_list {
+    
+    padding-top: 15px;
+}
+
+.heading {
+    padding: 15px;
+}
+
+form {
+    padding-bottom: 15px;
+}
