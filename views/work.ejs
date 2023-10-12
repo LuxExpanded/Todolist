@@ -1,35 +1,36 @@
 <%-include('partials/header.ejs') %>
 <body>
     <div class="container">
-        <div class="todolist lavender" id="border">           
-            <% if (locals.items_2) { %>
-                    <div class="heading">
+        <div class="todolist lavender" id="border" >
+            <div class="heading">
+                <% if (locals.items_2) { %>
+                    <div class="announcement">
                     <h1><%= locals.this_day %></h1>
                     <h2>There are <%= locals.items_2.length %> work tasks to do today!</h2>
-                    <div class="work_list">
+                    </div>
+                    <div class="daily_list">
                           <ol class="list-group list-group-numbered">
                             <% for (i=0; i < items_2.length; i++) { %>
-                                 <li class="list-group-item list-group-item-dark">
-                                    <%= items_2[i] %>
+                                 <li class="list-group-item list-group-item-warning" id=items_2[i]>
+                                    <input type="checkbox" name="remove" value="<%= items_2[i] %>"><label for="remove"><%= items_2[i] %></label>
+                                   
+
                                 </li>
                                
                             <% } %>
                         </ol>
+
                     </div>
-                </div>
-            <% } else{ %>
-                    <div class="heading">
-                        <h1>There are no todo items yet</h1>
-                    </div>
-                    
+                <% } else{ %>
+                    <h1>There are no todo items yet</h1>
                 <% }; %>
-            
+            </div>
                     
                       
             <br>
             <div class="form">
                 <form action="/work" method="post" class="enter">
-                    <input type="text" name="task_2" id="task" placeholder="Add Something Todo" required>
+                    <input type="text" name="task_2" id="task_2" placeholder="Add Something Todo" required>
                     <button name="add" type="submit"><img src="\images\plus-circle-svgrepo-com.svg" alt="plus icon" class="icon"></button>
                 </form>
             </div>

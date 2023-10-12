@@ -32,14 +32,8 @@ app.get("/work", (req, res) => {
     res.render("work.ejs", {
         items_2: work_task,
         work_length: num_work,
-        this_day: currentDate,
-        checked:   checkbox.addEventListener('change', function() {
-            if (this.checked) {
-              checkbox.remove(this.checked);
-            } 
-          async: true
-        }, )
-    })
+        this_day: currentDate
+        })
 });
 
 
